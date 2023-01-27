@@ -2,10 +2,17 @@
 `include "./half-adder.v"
 
 module tb_HalfAdder;
-	wire tb_Carry, tb_Sum;
-	reg  tb_Bit1, tb_Bit2;
+	wire	tb_Carry, 
+			tb_Sum;
+			
+	reg		tb_Bit1,
+			tb_Bit2;
 	
-	HalfAdder HA(tb_Carry, tb_Sum, tb_Bit1, tb_Bit2);
+	HalfAdder 	HA(	.Carry (tb_Carry), 
+					.Sum (tb_Sum), 
+					.Bit1 (tb_Bit1), 
+					.Bit2 (tb_Bit2)
+					);
 	
 	initial begin
 			tb_Bit1 = 0; tb_Bit2 = 0;
